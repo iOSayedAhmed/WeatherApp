@@ -1,7 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -11,15 +12,45 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="weatherIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Qts-zl-v9M">
+                                <rect key="frame" x="20.5" y="318.5" width="373" height="269"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nZ2-wn-sfu">
+                                <rect key="frame" x="0.0" y="319" width="69" height="269"/>
+                                <color key="backgroundColor" red="0.092807687819004059" green="0.14808785915374756" blue="0.16026574373245239" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DBG-ND-QOo">
+                                <rect key="frame" x="345" y="319" width="69" height="269"/>
+                                <color key="backgroundColor" red="0.092807687819004059" green="0.14808785915374756" blue="0.16026574373245239" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.07889818400144577" green="0.14791944622993469" blue="0.16019335389137268" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="DBG-ND-QOo" secondAttribute="bottom" constant="274" id="1mT-Xl-eFa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="nZ2-wn-sfu" secondAttribute="bottom" constant="274" id="3o9-pS-hCb"/>
+                            <constraint firstItem="DBG-ND-QOo" firstAttribute="leading" secondItem="nZ2-wn-sfu" secondAttribute="trailing" constant="276" id="5kD-Qq-ai5"/>
+                            <constraint firstItem="nZ2-wn-sfu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="275" id="9eP-ZB-8vD"/>
+                            <constraint firstItem="Qts-zl-v9M" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="BEv-0U-Omm"/>
+                            <constraint firstItem="DBG-ND-QOo" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="TIr-0a-w90"/>
+                            <constraint firstItem="Qts-zl-v9M" firstAttribute="height" secondItem="Ze5-6b-2t3" secondAttribute="height" multiplier="0.3" id="Uke-8c-AzK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nZ2-wn-sfu" secondAttribute="trailing" constant="345" id="ZdZ-lB-fei"/>
+                            <constraint firstItem="Qts-zl-v9M" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="kNb-uw-65z"/>
+                            <constraint firstItem="Qts-zl-v9M" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" multiplier="0.9" id="sZJ-jW-aU6"/>
+                            <constraint firstItem="nZ2-wn-sfu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="soo-h3-hVv"/>
+                            <constraint firstItem="DBG-ND-QOo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="275" id="yip-qI-6Tn"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52.173913043478265" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="weatherIcon" width="1024" height="1024"/>
+    </resources>
 </document>
